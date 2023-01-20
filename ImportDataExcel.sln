@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleImportDataExcel", "ImportDataExcel\ConsoleImportDataExcel.csproj", "{D71107E2-17AA-426A-AB68-107AD65790D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrayToExcel", "ImportData\ArrayToExcel.csproj", "{58E09EA4-EB94-4631-B900-F9C91CF62ABB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D71107E2-17AA-426A-AB68-107AD65790D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D71107E2-17AA-426A-AB68-107AD65790D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D71107E2-17AA-426A-AB68-107AD65790D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D71107E2-17AA-426A-AB68-107AD65790D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58E09EA4-EB94-4631-B900-F9C91CF62ABB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58E09EA4-EB94-4631-B900-F9C91CF62ABB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58E09EA4-EB94-4631-B900-F9C91CF62ABB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58E09EA4-EB94-4631-B900-F9C91CF62ABB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B8789D83-D92A-47B8-BFDB-69C088C1BEB7}
+	EndGlobalSection
+EndGlobal
