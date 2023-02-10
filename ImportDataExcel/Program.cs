@@ -11,7 +11,10 @@ namespace ImportDataExcel
     {
         static void Main(string[] args)
         {
-            TestDataTable();
+            //TestDataTable();
+            //ExportSupplier();
+            ImportSupplier2(@"D:\KERJA\AXATA\AxataPOS_V3\AxataPOS-V3\Src\AxataPOSV3\TestDllForm\bin\Supplier.xlsx");
+            Console.ReadLine();
         }
 
         static IEnumerable<SomeItem> SomeItems = Enumerable.Range(1, 10).Select(x => new SomeItem
@@ -38,6 +41,46 @@ namespace ImportDataExcel
             var excel = table.ToExcel();
 
             File.WriteAllBytes($@"..\{nameof(TestDataTable)}.xlsx", excel);
+        }
+
+        static void ExportSupplier()
+        {
+            DataTable x = AxataPOS.Models.Supplier.GetData("", "", "");
+            var excel = x.ToExcel();
+            File.WriteAllBytes($@"..\Supplier.xlsx", excel);
+        }
+        static void ImportSupplier2(string Path)
+        {
+            DataTable x = ArrayToExcel.EXcel2DataSet.MyExcelData(Path);
+            PrintDataTable(x);
+        }
+
+        static void PrintDataTable(DataTable data)
+        {
+            foreach (DataColumn item in data.Columns)
+            {
+                System.Console.Write(item.ColumnName.ToString() + " | ");
+            }
+            println("");
+            int a = 0;
+            foreach (DataRow item in data.Rows)
+            {
+                if (a == 2)
+                {
+                    break;
+                }
+                foreach (var dt in item.ItemArray)
+                {
+                    System.Console.Write(dt + " | ");
+                }
+                System.Console.WriteLine();
+                a++;
+            }
+        }
+
+        static void println(string msg)
+        {
+            System.Console.WriteLine(msg);
         }
     }
     internal class SomeItem

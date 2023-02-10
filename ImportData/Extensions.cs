@@ -28,12 +28,12 @@ namespace ArrayToExcel
 
         public static MemoryStream ToExcelStream<T>(this IEnumerable<T> items, Action<SchemaBuilder<T>>? schema = null)
         {
-            return ArrayToExcel.CreateExcel(items, schema);
+            return ExportToExcel.CreateExcel(items, schema);
         }
 
         public static MemoryStream ToExcelStream(this DataTable dataTable, Action<SchemaBuilder<DataRow>>? schema = null)
         {
-            return ArrayToExcel.CreateExcel(dataTable.Rows.AsEnumerable(), b => dataTable.SchemaBuilder(b, schema));
+            return ExportToExcel.CreateExcel(dataTable.Rows.AsEnumerable(), b => dataTable.SchemaBuilder(b, schema));
         }
 
         public static MemoryStream ToExcelStream(this DataSet dataSet, Action<DataTable, SchemaBuilder<DataRow>>? schema = null)

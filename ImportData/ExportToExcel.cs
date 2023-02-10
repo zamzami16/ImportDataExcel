@@ -11,7 +11,7 @@ using System.Text.RegularExpressions;
 
 namespace ArrayToExcel
 {
-    public class ArrayToExcel
+    public class ExportToExcel
     {
         public static MemoryStream CreateExcel<T>(IEnumerable<T> items, Action<SchemaBuilder<T>>? schema = null)
         {

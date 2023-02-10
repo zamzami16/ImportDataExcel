@@ -32,6 +32,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AxataPOS.Helpers">
+      <HintPath>..\..\AxataPOS_V3\AxataPOS-V3\Bin\AxataPOS.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="AxataPOS.Models">
+      <HintPath>..\..\AxataPOS_V3\AxataPOS-V3\Bin\AxataPOS.Models.dll</HintPath>
+    </Reference>
+    <Reference Include="FrmHelper">
+      <HintPath>..\..\AxataPOS_V3\AxataPOS-V3\Bin\FrmHelper.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
